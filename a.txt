@@ -1,13 +1,20 @@
 import pandas as pd
 
-# データフレームの作成
-data = {
-    '列1': [1, 2, 3],
-    '列2': ['A', 'B', 'C'],
-    '列3': [4.5, 5.5, 6.5]
-}
-df = pd.DataFrame(data)
+def create_dataframe():
+    # Create a DataFrame
+    data = {
+        'Column1': [1, 2, 3],
+        'Column2': ['A', 'B', 'C'],
+        'Column3': [4.5, 5.5, 6.5]
+    }
+    return pd.DataFrame(data)
 
-# 特定の列を抽出
-抽出した列 = df[['列1', '列2']]
-print(抽出した列)
+def extract_columns(df):
+    # Extract specific columns
+    extracted_columns = df[['Column1', 'Column2']]
+    return extracted_columns
+
+if __name__ == "__main__":
+    df = create_dataframe()
+    result = extract_columns(df)
+    print(result)
